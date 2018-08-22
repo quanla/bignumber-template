@@ -4,16 +4,13 @@ const {execOperator, execMethod} = require("./exec-operators");
 const {lazyOperator, lazyMethod} = require("./lazy-operators");
 const {consumeExpression: quickConsumeExpression} = require("./bnt-quick-consumers");
 
-const bnt = (strings, ...values) => {
+module.exports = (strings, ...values) => {
     if (Array.isArray(strings)) {
         return quickExec(strings, values);
     } else {
         return parseTemplate(strings);
     }
 };
-
-exports.bnt = bnt;
-
 
 const quickExec = (strings, values) => {
     let template = {strings, values};

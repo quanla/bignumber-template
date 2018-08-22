@@ -25,6 +25,6 @@ Then your wishes has become true.
 # Install
 
 ```
-npm i --save bnt
+npm i --save bignumber-template
 ```
 
