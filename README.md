@@ -20,7 +20,7 @@ or
 bnt(`(a + b) * (c + d)`)({a,b,c,d})
 ```
 
-Then your wishes has become true.
+Then your wishes has come true.
 
 # Install
 
