@@ -6,18 +6,19 @@ const consumeExpressionP = ({consumeStrNumber, consumeTemplateValue, consumeGrou
         if (strNumber) {
             return strNumber;
         }
-        const templateValue = consumeTemplateValue(template);
-        if (templateValue) {
-            return templateValue;
+        const method = consumeMethod(template, getMethod, consumeExpression);
+        if (method) {
+            return method;
         }
 
         const group = consumeGroup(template, consumeExpression);
         if (group) {
             return group;
         }
-        const method = consumeMethod(template, getMethod, consumeExpression);
-        if (method) {
-            return method;
+
+        const templateValue = consumeTemplateValue(template);
+        if (templateValue) {
+            return templateValue;
         }
 
         return null;

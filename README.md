@@ -17,7 +17,7 @@ bnt`(${a} + ${b}) * (${c} + ${d})`
 ```
 or
 ```
-bnt(`($a + $b) * ($c + $d)`)({a,b,c,d})
+bnt(`(a + b) * (c + d)`)({a,b,c,d})
 ```
 
 Then your wishes has become true.

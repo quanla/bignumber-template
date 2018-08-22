@@ -65,7 +65,7 @@ const consumeGroup = (template, consumeExpression) => {
     };
 };
 const consumeStrNumber = (template, negate) => {
-    const match = /^\s*(-\s*)?([\d.]+)\s*/.exec(template.strings[0]);
+    const match = /^\s*(-\s*)?([\d.e]+)\s*/.exec(template.strings[0]);
     if (!match) {
         return null;
     }
@@ -80,7 +80,7 @@ const consumeStrNumber = (template, negate) => {
 };
 
 const consumeOperator = (template) => {
-    const match = /^\s*(==|!=|<=|>=|[-+*/<>])\s*/.exec(template.strings[0]);
+    const match = /^\s*(==|\*\*|!=|<=|>=|[-+*/<>])\s*/.exec(template.strings[0]);
     if (!match) {
         return null;
     }

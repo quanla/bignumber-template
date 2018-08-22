@@ -13,6 +13,10 @@ const operator2s = {
         priority: 1,
         method: op("multipliedBy"),
     },
+    "**": {
+        priority: 1,
+        method: op("exponentiatedBy"),
+    },
     "/": {
         priority: 1,
         method: op("dividedBy"),
