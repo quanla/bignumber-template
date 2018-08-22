@@ -1,4 +1,4 @@
-const bnt = require("./bnt");
+const bnt = require("./");
 
 console.log(bnt`-2`);
 console.log(bnt`(-2)`);
